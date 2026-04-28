@@ -1,0 +1,50 @@
+type: hik_camera
+
+camera_info_path: ${VISION_ROOT}/config/camera_info.yaml
+
+hik_camera:
+  target_sn: DA2166465
+  adc_bit_depth: Bits_8
+  pixel_format: BayerRG8 #RGB8Packed
+  reverse_x: false
+  reverse_y: false
+  width: 1440
+  height: 1080
+  offset_x: 0
+  offset_y: 0
+  acquisition_frame_rate_enable: true
+  acquisition_frame_rate: 250
+  exposure_time: 2000
+  gain: 16.9
+  gamma: 0.7 #Bayer用不了
+  trigger_type: none
+  trigger_source: ""
+  trigger_activation: 0
+  use_raw: false
+  use_rgb: false
+  use_ea: false
+  use_cuda_cvt: true
+
+  
+video_player:
+  fps: 60
+  loop: true
+  use_cvt: true
+  trigger_mode: false
+  #path: /home/hy/wust_data/video/aaa.mp4
+  #path: /home/hy/wust_data/video/jiao.avi
+  #path: /home/hy/Z_LION_AutoAim2025/src/auto_aim_publisher/videos/sample.avi
+  #path: /home/hy/wust_data/record/20251111_134416_187.avi
+  path: /home/hy/data/video_save/5.21成都.mp4
+  #path: /home/hy/wust_data/video/Sentry.mp4
+  start_frame: 0
+
+uvc:
+  device_name: "/dev/v4l/by-path/pci-0000:00:14.0-usb-0:3.4:1.0-video-index0"
+  fps: 60
+  width: 1280
+  height: 720
+  exposure: 100.0
+  gain: 10.0
+  gamma: 100
+  trigger_mode: false
